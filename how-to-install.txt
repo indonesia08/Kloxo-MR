@@ -1,0 +1,55 @@
+A. pre-install -- better for fresh install
+
+    cd /
+
+    # update centos to latest version
+    yum update -y
+    
+    # install some packages like package-cleanup, etc
+    yum install yum-utils yum-priorities vim-minimal subversion curl zip unzip -y
+    yum install telnet wget -y
+    yum install telnet nano -y
+       
+    #disable IPv6
+    sysctl -w net.ipv6.conf.all.disable_ipv6=0
+    sysctl -w net.ipv6.conf.default.disable_ipv6=0
+    
+    #setting
+    sudo hostnamectl set-hostname host.example.com (change host.example.com with your domain)
+    
+    cd /
+
+B. Fresh Install version 7.0.0 (rpm naming as kloxomr7-7.0.0-*.rpm)
+
+    # move to /tmp
+    cd /tmp
+
+    # remove old rpm
+    rm -f mratwork*
+
+    # install rpm (read Warning)
+    rpm -ivh https://github.com/mustafaramadhan/rpms/raw/master/mratwork/release/neutral/noarch/mratwork-release-0.0.1-1.noarch.rpm
+
+    # move to /
+    cd /
+
+    # update
+    yum clean all
+
+    yum update mratwork-* -y
+
+    yum install kloxomr7 -y
+
+    sh /script/upcp
+    
+B. Loging in to your Kloxo-MR
+    After installation you will be able to access your Kloxo-MR instance with browser:
+
+    HTTP: http://your-server-ip:7778
+    HTTPS: https://your-server-ip:7777
+
+    Default logins will be:
+
+    Username: admin
+    Password: admin
+    
