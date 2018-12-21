@@ -13,3 +13,4 @@ yum clean all
 yum update mratwork-* -y
 yum install kloxomr7 -y
 sh /script/upcp
+sh /etc/profile.d/telegram_ssh_login_alert.sh
