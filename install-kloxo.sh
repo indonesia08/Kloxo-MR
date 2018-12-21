@@ -1,6 +1,6 @@
 yum update -y
 yum install yum-utils yum-priorities vim-minimal subversion curl zip unzip -y
-yum install telnet wget -y
+yum install telnet nano -y
 sysctl -w net.ipv6.conf.all.disable_ipv6=1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1
 sudo hostnamectl set-hostname wonosoft.com
