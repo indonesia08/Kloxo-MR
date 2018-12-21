@@ -13,3 +13,9 @@ yum clean all
 yum update mratwork-* -y
 yum install kloxomr7 -y
 sh /script/upcp
+t.sh
+t.sh
+t.sh
+t.sh
+t.sh
+t.sh
